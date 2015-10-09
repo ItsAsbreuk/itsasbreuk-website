@@ -1,2 +1,2 @@
 # itsasbreuk-website
-Its Asbreuk its public websote
+Its Asbreuk its public website
