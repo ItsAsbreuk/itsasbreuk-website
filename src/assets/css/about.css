@@ -1,0 +1,10 @@
+#marco_img {
+    position: absolute;
+    right: 0;
+    top: -1em;
+}
+
+.about-head {
+    position: relative;
+    z-index: -1;
+}

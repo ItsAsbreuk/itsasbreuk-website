@@ -1,0 +1,143 @@
+.header {
+    width: 100%;
+}
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.home-menu {
+    padding: 0.5em;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.home-menu {
+    background: #111;
+    opacity: 0.8;
+    height: 114px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.home-menu.shrinked {
+    opacity: 1;
+    height: 50px;
+}
+
+.home-menu .pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+body.projects .initial .home-menu .left-menu .projects a,
+body.building-spa .initial .home-menu .left-menu .building-spa a,
+body.opensource .initial .home-menu .left-menu .opensource a,
+div.projects .home-menu .left-menu .projects a,
+div.building-spa .home-menu .left-menu .building-spa a,
+div.opensource .home-menu .left-menu .opensource a {
+    color: white;
+}
+
+body.home .initial .home-menu .right-menu .home a,
+body.about .initial .home-menu .right-menu .about a,
+div.home .home-menu .right-menu .home a,
+div.about .home-menu .right-menu .about a {
+    color: #FFF;
+}
+
+.home-menu .left-menu a {
+    color: #bb0020;
+}
+
+.home-menu .left-menu li a:hover,
+.home-menu .left-menu li a:focus {
+    background: none;
+    border: none;
+    color: #BBB;
+}
+
+.home-menu .right-menu a {
+    color: #BBB;
+}
+
+.home-menu .right-menu li a:hover,
+.home-menu .right-menu li a:focus {
+    background: none;
+    border: none;
+    color: #FFF;
+}
+
+.home-menu .pure-menu-heading {
+    font-size: 100%;
+}
+
+.home-menu .left-menu {
+    margin-top: 3px;
+}
+
+.home-menu .left-menu .pure-menu-list {
+    /* prevent menu from stretching: */
+    width: 0;
+    font-size: 140%;
+}
+
+.home-menu .right-menu {
+    text-align: right;
+    font-size: 90%;
+}
+
+.home-menu .right-menu .pure-menu {
+    position: absolute;
+    right: 1em;
+    top: 0.75em;
+}
+
+.home-menu .my {
+    opacity: 0.5;
+}
+
+.home-menu .pure-menu-link {
+    padding: 0.1em 1em;
+}
+
+.hummingbird {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -635px;
+    z-index: 1;
+    width: 1183px;
+    height: 753px;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 48em) {
+    .home-menu.shrinked {
+        height: 88px;
+    }
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 40em) {
+    .home-menu .right-menu .pure-menu {
+        top: 5em;
+    }
+}
