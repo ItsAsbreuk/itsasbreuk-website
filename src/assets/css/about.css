@@ -8,3 +8,27 @@
     position: relative;
     z-index: -1;
 }
+
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (max-width: 48em) {
+    /* We increase the header font size even more */
+    #marco_img {
+        margin-top: -4em;
+    }
+}
+
+
+@media (max-width: 34em) {
+    /* We increase the header font size even more */
+    #marco_img {
+        margin-top: -6.2em;
+        right: auto;
+        left: 50%;
+        margin-left: -75px;
+    }
+}

@@ -1,6 +1,7 @@
 var React = require('react'),
-    Reflux = require('reflux',;
-    store = require('./store'),
+    Reflux = require('reflux'),
+    store = require('../store'),
+    Header = require('./header'),
     Website;
 
 var Website = React.createClass({

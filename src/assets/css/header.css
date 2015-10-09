@@ -141,3 +141,14 @@ div.about .home-menu .right-menu .about a {
         top: 5em;
     }
 }
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 31em) {
+    .home-menu.shrinked .left-menu .pure-menu-item {
+        display: block;
+    }
+}
