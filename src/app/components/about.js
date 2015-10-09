@@ -1,16 +1,17 @@
-var React = require('react');
-var Reflux = require('reflux');
-var Link = require('react-router').Link;
-var actions = require('../actions');
-var Footer = require('./footer');
-var store = require('../store');
-var constants = require('../constants');
-var actions = require('../actions');
-var img1 = require('../../assets/images/marco_asbreuk.png');
-
 require('../../assets/css/about.css');
 
-var Page = React.createClass({
+var React = require('react'),
+    Reflux = require('reflux'),
+    Link = require('react-router').Link,
+    actions = require('../actions'),
+    Footer = require('./footer'),
+    store = require('../store'),
+    constants = require('../constants'),
+    actions = require('../actions'),
+    image_marco = require('../../assets/images/marco_asbreuk.png'),
+    Page;
+
+Page = React.createClass({
     mixins: [Reflux.connect(store)],
     componentWillMount: function() {
         actions[constants.SEND_ROUTE_STATE]('about');
@@ -26,7 +27,7 @@ var Page = React.createClass({
                         <div className="splash-container">
                             <h1 className="splash-head about-head">
                                 Marco Asbreuk
-                                <img id="marco_img" src={img1} />
+                                <img id="marco_img" src={image_marco} />
                             </h1>
                             <p className="splash-subhead">
                                 About myself: <span className="red bold">looking for new opportunities as a remote worker</span>.

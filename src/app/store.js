@@ -1,7 +1,9 @@
-var Reflux = require('reflux');
-var actions = require('./actions');
-var count = 0;
-var store = Reflux.createStore({
+var Reflux = require('reflux'),
+    actions = require('./actions'),
+    count = 0,
+    store;
+
+store = Reflux.createStore({
     listenables: [actions],
     sendRouteState: function(route) {
         this.trigger({currentroute: route});

@@ -1,49 +1,26 @@
-
 require('../assets/css/pure.css');
 require('../assets/css/pure-grids-responsive.css');
 require('../assets/css/main.css');
 
-// reflux-statechange NEEDS to be defined before any components are required!
-var React = require('react');
-var Reflux = require('reflux');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.IndexRoute;
-var Link = ReactRouter.Link;
+var React = require('react'),
+    Reflux = require('reflux'),
+    ReactRouter = require('react-router'),
+    Router = ReactRouter.Router,
+    Route = ReactRouter.Route,
+    IndexRoute = ReactRouter.IndexRoute,
+    Link = ReactRouter.Link,
+    constants = require('./constants'),
+    actions = require('./actions'),
+    Header = require('./components/header'),
+    Website = require('./components/website'),
+    Home = require('./components/home'),
+    About = require('./components/about'),
+    BuildingSPA = require('./components/building-spa'),
+    Projects = require('./components/projects'),
+    OpenSource = require('./components/opensource'),
+    App;
 
-var constants = require('./constants');
-var store = require('./store');
-var actions = require('./actions');
-var Header = require('./components/header');
-var router;
-
-// var Checkbox = require('./components/itsa-react-checkbox.js');
-
-var Website = React.createClass({
-    mixins: [Reflux.connect(store)],
-    render: function() {
-        return (
-            <div className={this.state.currentroute}>
-                <Header />
-                {this.props.children}
-            </div>
-        )
-    }
-});
-
-var Home = require('./components/home');
-var About = require('./components/about');
-var BuildingSPA = require('./components/building-spa');
-var Projects = require('./components/projects');
-var OpenSource = require('./components/opensource');
-
-var onUpdate = function(p1,p2,p3,p4) {
-    console.warn('router');
-    console.warn(router);
-};
-
-var App = React.createClass({
+App = React.createClass({
     onScroll: function() {
         actions[constants.SEND_SCROLL_AMOUNT](window.scrollY);
     },

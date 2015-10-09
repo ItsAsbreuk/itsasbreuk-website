@@ -1,10 +1,11 @@
-var React = require('react');
-var Reflux = require('reflux');
-var Footer = require('./footer');
-var Link = require('react-router').Link;
-var store = require('../store');
-var constants = require('../constants');
-var actions = require('../actions');
+var React = require('react'),
+    Reflux = require('reflux'),
+    Footer = require('./footer'),
+    Link = require('react-router').Link,
+    store = require('../store'),
+    constants = require('../constants'),
+    actions = require('../actions'),
+    Page;
 
 var Page = React.createClass({
     mixins: [Reflux.connect(store)],

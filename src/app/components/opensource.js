@@ -1,11 +1,12 @@
-var React = require('react');
-var Reflux = require('reflux');
-var Footer = require('./footer');
-var store = require('../store');
-var constants = require('../constants');
-var actions = require('../actions');
+var React = require('react'),
+    Reflux = require('reflux'),
+    Footer = require('./footer'),
+    store = require('../store'),
+    constants = require('../constants'),
+    actions = require('../actions'),
+    Page;
 
-var Page = React.createClass({
+Page = React.createClass({
     mixins: [Reflux.connect(store)],
     componentWillMount: function() {
         actions[constants.SEND_ROUTE_STATE]('opensource');

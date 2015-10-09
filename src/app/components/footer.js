@@ -1,7 +1,9 @@
-var React = require('react');
 require('../../assets/css/footer.css');
 
-var Footer = React.createClass({
+var React = require('react'),
+    Footer;
+
+Footer = React.createClass({
     render: function() {
         return (
             <div className="footer l-box is-center">

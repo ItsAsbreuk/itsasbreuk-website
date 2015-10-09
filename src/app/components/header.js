@@ -1,14 +1,16 @@
-var React = require('react');
-var Reflux = require('reflux');
-var store = require('../store');
-var Link = require('react-router').Link;
 require('../../assets/css/header.css');
-var image = require('../../assets/images/hummingbird.png');
-var maxScrollAmount = 50;
-var fadeArea = 100;
-var classNames = require('classnames');
 
-var Header = React.createClass({
+var React = require('react'),
+    Reflux = require('reflux'),
+    store = require('../store'),
+    Link = require('react-router').Link,
+    image = require('../../assets/images/hummingbird.png'),
+    maxScrollAmount = 50,
+    fadeArea = 100,
+    classNames = require('classnames'),
+    Header;
+
+Header = React.createClass({
     mixins: [Reflux.connect(store)],
     render: function() {
         var imageOffset= Math.round(this.state.scrollamount/4),
@@ -46,7 +48,7 @@ var Header = React.createClass({
                         <div className="pure-menu">
                             <ul className="pure-menu-list">
                                 <li className="pure-menu-item home"><Link to="/" className="pure-menu-link">HOME</Link></li>
-                                <li className="pure-menu-item about"><Link to="/marco-asbreuk-about" className="pure-menu-link">ABOUT</Link></li>
+                                <li className="pure-menu-item about"><Link to="/marco-asbreuk-about" className="pure-menu-link">ABOUT ME</Link></li>
                             </ul>
                         </div>
                     </div>
